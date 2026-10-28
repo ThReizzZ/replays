@@ -1,0 +1,228 @@
+"Phrases"
+{
+	// =====[ CHAT MESSAGES ]=====
+	"No Replays Found (Map)"
+	{
+		"en"		"{darkred}No replays for this map were found."
+		"chi"		"{darkred}当前地图没有录像."
+		"ru"		"{darkred}На этой карте не найдено повторов."
+	}
+	"No Replays Found (Mode)"
+	{
+		// No Vanilla replays for this map were found.
+		"#format"	"{1:s}"
+		"en"		"{darkred}No {1} replays on this map were found."
+		"chi"		"{darkred}当前地图没有录像({1})."
+		"ru"		"{darkred}На этой карте нет повторов {1} режима."
+	}
+	"No Bots Available"
+	{
+		"en"		"{darkred}There are currently no replay bots available."
+		"chi"		"{darkred}当前没有可用的回放机器人."
+		"ru"		"{darkred}В настоящее время нет доступных ботов воспроизведения."
+	}
+	"Bot Add Failed"
+	{
+		"en"		"{red}Failed to add a replay bot."
+	}
+	"Server Full"
+	{
+		"en"		"{red}The server is full, so no replay bot can be added!"
+	}
+	"No Replay Found"
+	{
+		"en"		"{red}No replay found!"
+		"chi"		"{red}本地未找到回放!"
+	}
+
+
+	// =====[ REPLAY MENU ]=====
+	"Replay Menu - Title"
+	{
+		// Load a Replay
+		//
+		// Map - kz_map
+		// Mode - Vanilla
+		//
+		"#format"	"{1:s},{2:s}"
+		"en"		"Load a Replay\n \nMap - {1}\nMode - {2}\n "
+		"chi"		"加载录像\n \n地图 - {1}\n模式 - {2}\n "
+		"ru"		"Загрузить повтор\n \nКарта - {1}\nРежим - {2}\n "
+	}
+	"Replay Menu (Mode) - Title"
+	{
+		// Load a Replay
+		//
+		// Map - kz_map
+		//
+		// Select a Mode
+		"#format"	"{1:s}"
+		"en"		"Load a Replay\n \nMap - {1}\n \nSelect a Mode"
+		"chi"		"加载录像\n \n地图 - {1}\n \n选择模式"
+		"ru"		"Загрузить повтор\n \nКарта - {1}\n \nВыбрать режим"
+	}
+	"Replay Menu - Wrong Map"
+	{
+		"#format"	"{1:s}"
+		"en"		"{darkred}This replay was not recorded on this map. Please switch to {1} and try again."
+		"chi"		"{darkred}此回放并非在此地图上记录的. 请切换到 {1} 再次尝试."
+	}
+	"Replay Menu - No File"
+	{
+		"en"		"{darkred}There is no file for this replay. Please contact an admin if you think this is an error."
+		"chi"		"{darkred}没有用于此回放的文件. 如果你认为这是一个错误，请联系管理员."
+	}
+	"Replay Menu - Wrong Tickrate"
+	{
+		"#format"	"{1:f},{2:f}"
+		"en"		"{darkred}This replay was recorded on {1} tickrate. This server's tickrate is {2}."
+		"chi"		"{darkred}回放是在 {1} tick服务器记录的. 此服务器是 {2}tick."
+	}
+
+
+	// =====[ REPLAY CONTROL MENU ]=====
+	"Replay Controls - Title"
+	{
+		"en"		"Replay Controls"
+		"chi"		"回放控制器"
+		"ru"		"Управление повтором"
+	}
+	"Replay Controls - Teleports"
+	{
+		"#format"	"{1:d}"
+		"en"		"Teleports: {1}"
+		"chi"		"传送: {1}"
+	}
+	"Replay Controls - Pause"
+	{
+		"en"		"Pause"
+		"chi"		"暂停"
+		"ru"		"Пауза"
+	}
+	"Replay Controls - Resume"
+	{
+		"en"		"Resume"
+		"chi"		"恢复"
+		"ru"		"Продолжить"
+	}
+	"Replay Controls - Skip"
+	{
+		"en"		"Skip 10s"
+		"chi"		"前进 10 秒"
+		"ru"		"Пропустить 10с"
+	}
+	"Replay Controls - Forward 1s"
+	{
+		"en"		"Forward 1s"
+		"chi"		"前进 1 秒"
+		"ru"		"Вперёд 1с"
+	}
+	"Replay Controls - Rewind"
+	{
+		"en"		"Rewind 10s"
+		"chi"		"回退 10 秒"
+		"ru"		"Перемотать 10с"
+	}
+	"Replay Controls - Rewind 1s"
+	{
+		"en"		"Rewind 1s"
+		"chi"		"回退 1 秒"
+		"ru"		"Назад 1с"
+	}
+	"Replay Controls - Freecam"
+	{
+		"en"		"Freecam"
+		"chi"		"自由视角"
+		"ru"		"Свободная камера"
+	}
+	"Replay Controls - Back To Bot"
+	{
+		"en"		"Back to bot"
+	}
+	"Replay Controls - Exit"
+	{
+		"en"		"Exit"
+		"chi"		"退出"
+	}
+	"Replay Controls - Invalid Time"
+	{
+		"en"		"{red}Invalid Time."
+		"chi"		"{red}无效的计时."
+		"ru"		"{red}Неправильное время."
+	}
+	"Replay Controls - Bot Controlled"
+	{
+		"en"		"{red}Another player is controlling this replay bot!"
+	}
+	"Replay Controls - Not Spectating Bot"
+	{
+		"en"		"{red}You are not spectating a replay bot!"
+	}
+	"Replay Controls - Not Controlling Bot"
+	{
+		"en"		"{red}You are not controlling this replay bot! Use !rpcontrols to take control."
+	}
+
+
+	// =====[ REPLAY MENUS ]=====
+	"Replay Menu - Categories - Title"
+	{
+		// Replay Menu
+		//
+		// Map - kz_map
+		// Mode - Vanilla
+		//
+		"#format"	"{1:s},{2:s}"
+		"en"		"Replay Menu\n \nMap - {1}\nMode - {2}\n "
+		"chi"		"录像菜单\n \n地图 - {1}\n模式 - {2}\n "
+	}
+	"Replay Menu - Server Records"
+	{
+		"en"		"Server Records"
+		"chi"		"服务器记录"
+	}
+	"Replay Menu - Personal Records"
+	{
+		"en"		"Personal Records"
+		"chi"		"个人记录"
+	}
+	"Replay Menu - All Server Records"
+	{
+		"en"		"All Server Records"
+		"chi"		"服务器所有记录"
+	}
+	"Replay Menu - Server Records - Title"
+	{
+		"#format"	"{1:s},{2:s}"
+		"en"		"Server Records\n \nMap - {1}\nMode - {2}\n "
+		"chi"		"服务器记录\n \n地图 - {1}\n模式 - {2}\n "
+	}
+	"Replay Menu - Personal Records - Title"
+	{
+		"#format"	"{1:s},{2:s}"
+		"en"		"Personal Records\n \nMap - {1}\nMode - {2}\n "
+		"chi"		"个人记录\n \n地图 - {1}\n模式 - {2}\n "
+	}
+	"Replay Menu - All Records - Type - Title"
+	{
+		"#format"	"{1:s},{2:s}"
+		"en"		"All Server Records\n \nMap - {1}\nMode - {2}\n \nSelect Pro or Nub"
+		"chi"		"服务器所有记录\n \n地图 - {1}\n模式 - {2}\n \n选择 Pro 或 Nub"
+	}
+	"Replay Menu - All Records - Title"
+	{
+		"#format"	"{1:s},{2:s},{3:s}"
+		"en"		"All Server Records\n \nMap - {1}\nMode - {2}\nType - {3}\n "
+		"chi"		"服务器所有记录\n \n地图 - {1}\n模式 - {2}\n类型 - {3}\n "
+	}
+	"Replay Menu - No Personal Replays"
+	{
+		"en"		"{darkred}You have no personal replays on this map."
+		"chi"		"{darkred}你在这张地图没有个人录像."
+	}
+	"Replay Menu - No Records"
+	{
+		"en"		"{darkred}No replays found."
+		"chi"		"{darkred}没有找到录像."
+	}
+}
