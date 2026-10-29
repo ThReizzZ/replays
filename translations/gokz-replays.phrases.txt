@@ -34,6 +34,20 @@
 		"en"		"{red}No replay found!"
 		"chi"		"{red}本地未找到回放!"
 	}
+	"Personal Replay Updated"
+	{
+		"#format"	"{1:s},{2:s},{3:s}"
+		"en"		"{purple}(>_<) {grey}| {red}Your personal best replay has been updated: {1} [{2} {3}]"
+		"chi"		"{purple}(>_<) {grey}| {red}你的个人 PB 录像已更新: {1} [{2} {3}]"
+		"ru"		"{purple}(>_<) {grey}| {red}Ваш повтор личного рекорда обновлён: {1} [{2} {3}]"
+	}
+	"Server Record Replay Updated"
+	{
+		"#format"	"{1:s},{2:s},{3:s}"
+		"en"		"{purple}(>_<) {grey}| {red}The server record replay has been updated: {1} [{2} {3}]"
+		"chi"		"{purple}(>_<) {grey}| {red}服务器纪录录像已更新: {1} [{2} {3}]"
+		"ru"		"{purple}(>_<) {grey}| {red}Повтор рекорда сервера обновлён: {1} [{2} {3}]"
+	}
 
 
 	// =====[ REPLAY MENU ]=====

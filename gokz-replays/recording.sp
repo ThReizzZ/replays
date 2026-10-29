@@ -282,6 +282,7 @@ public Action Timer_EndRecording(Handle timer, DataPack data)
 	char path[PLATFORM_MAX_PATH];
 	char playerPath[PLATFORM_MAX_PATH];
 	bool saved = false;
+	int timeType = GOKZ_GetTimeTypeEx(teleportsUsed);
 
 	if (isCheater)
 	{
@@ -290,14 +291,32 @@ public Action Timer_EndRecording(Handle timer, DataPack data)
 	}
 	else
 	{
+		bool serverReplaySaved = false;
 		if (isServerRecord)
 		{
-			saved = SaveServerRecordReplay(path, client, course, time, teleportsUsed);
+			serverReplaySaved = SaveServerRecordReplay(path, client, course, time, teleportsUsed);
+			saved = serverReplaySaved;
 		}
-		if (isPB && SavePlayerReplay(client, course, time, teleportsUsed, playerPath) && !saved)
+		bool playerReplaySaved = false;
+		if (isPB)
 		{
-			strcopy(path, sizeof(path), playerPath);
-			saved = true;
+			playerReplaySaved = SavePlayerReplay(client, course, time, teleportsUsed, playerPath);
+			if (playerReplaySaved && !saved)
+			{
+				strcopy(path, sizeof(path), playerPath);
+				saved = true;
+			}
+		}
+
+		// A server record also updates the player's PB replay, so only tell
+		// them about the more significant one.
+		if (serverReplaySaved)
+		{
+			PrintReplayUpdatedMessage(client, "Server Record Replay Updated", course, time, timeType);
+		}
+		else if (playerReplaySaved)
+		{
+			PrintReplayUpdatedMessage(client, "Personal Replay Updated", course, time, timeType);
 		}
 	}
 
@@ -676,6 +695,16 @@ static bool SavePlayerReplay(int client, int course, float time, int teleportsUs
 
 	MarkPlayerReplayCacheDirty();
 	return true;
+}
+
+// Notifies the player that a replay file was updated. The prefix is part of
+// the translation, so this plugin can use its own "(>_<)" prefix instead of
+// the server-wide GOKZ chat prefix.
+static void PrintReplayUpdatedMessage(int client, const char[] phrase, int course, float time, int timeType)
+{
+	char courseLabel[16];
+	GetCourseLabel(course, courseLabel, sizeof(courseLabel));
+	GOKZ_PrintToChat(client, false, "%t", phrase, GOKZ_FormatTime(time), courseLabel, gC_TimeTypeNames[timeType]);
 }
 
 static bool SaveRecordingOfCheater(int client, ACReason reason)

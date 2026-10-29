@@ -461,7 +461,7 @@ static bool LoadReplayFromInfo(int client, const char[] info)
 	return LoadReplayBot(client, path) != -1;
 }
 
-static void GetCourseLabel(int course, char[] buffer, int maxlength)
+void GetCourseLabel(int course, char[] buffer, int maxlength)
 {
 	if (course == 0)
 	{
